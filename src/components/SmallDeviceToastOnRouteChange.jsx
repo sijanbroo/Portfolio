@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export default function SmallDeviceToastOnRouteChange({
-  message = "This website is not optimized for small devices.",
+  message = "SijanBro's Portfolio Website - made in Nov, 2025",
   breakpoint = 768,
   position = "bottom-right",
   autoClose = 8000,

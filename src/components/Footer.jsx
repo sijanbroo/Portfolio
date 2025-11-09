@@ -61,7 +61,7 @@ function Footer() {
             >
               <i
                 className="fi fi-brands-twitter-alt text-[22px] sm:text-[24px] leading-none"
-                style={{ color: "#000000" }}
+                style={{ color: "white" }}
               />
             </a>
           </nav>

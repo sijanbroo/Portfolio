@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <ToastContainer newestOnTop />
-      <SmallDeviceToast message="SijanBro's Portfolio Website" />
+      <SmallDeviceToast message="SijanBro's Portfolio Website - made in Nov, 2025" />
 
       <NavBar />
 

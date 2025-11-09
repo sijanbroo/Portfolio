@@ -47,7 +47,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="flex max-md:flex-col flex-row justify-center items-center mt-15 gap-8">
+      <div className="flex max-md:flex-col flex-row justify-center items-center mt-10 gap-8">
         <div className="mr-8">
           <img
             src="imgs/avatar.svg"
@@ -57,7 +57,7 @@ function Home() {
           />
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-2 max-md:w-full max-md:ml-3  w-1/2">
+        <div className="flex flex-col items-center justify-center gap-2 max-md:w-auto max-md:m-5  w-1/2">
           <div className="flex justify-center  mb-6">
             <h1 className="text-4xl max-md:text-3xl font-medium">
               LET ME <span className="text-[#cc5ef7]">INTRODUCE</span> MYSELF

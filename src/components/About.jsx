@@ -25,13 +25,13 @@ function About() {
           </p>
           <ul className="text-xl max-md:text-lg font-semibold">
             <li>
-              <i class="fi fi-dc-angle-double-small-right"></i>Playing Games
+              <i className="fi fi-dc-angle-double-small-right"></i>Playing Games
             </li>
             <li>
-              <i class="fi fi-dc-angle-double-small-right"></i>Travelling
+              <i className="fi fi-dc-angle-double-small-right"></i>Travelling
             </li>
             <li>
-              <i class="fi fi-dc-angle-double-small-right"></i>Reading Books
+              <i className="fi fi-dc-angle-double-small-right"></i>Reading Books
             </li>
           </ul>
           <div className="flex mt-6 flex-col text-xl max-md:text-lg justify-center text-[#9b7eac]">
@@ -54,55 +54,55 @@ function About() {
           Professional <span className="text-[#cc5ef7]">Skillset</span>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 sm:gap-9 justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 sm:gap-9 justify-items-center items-center">
           <i
-            className="devicon-html5-plain duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] transition"
+            className="devicon-html5-plain duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] hover:scale-110 transition-all"
             style={{ fontSize: "64px" }}
           ></i>
           <i
-            className="devicon-css3-plain font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] transition"
+            className="devicon-css3-plain font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] hover:scale-110 transition-all"
             style={{ fontSize: "64px" }}
           ></i>
           <i
-            className="devicon-javascript-plain font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] transition"
-            style={{ fontSize: "64px" }}
-          ></i>
-
-          <i
-            className="devicon-react-original font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] transition"
-            style={{ fontSize: "64px" }}
-          ></i>
-          <i
-            className="devicon-redux-original font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] transition"
+            className="devicon-javascript-plain font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] hover:scale-110 transition-all"
             style={{ fontSize: "64px" }}
           ></i>
 
           <i
-            className="devicon-tailwindcss-original font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] transition"
+            className="devicon-react-original font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] hover:scale-110 transition-all"
             style={{ fontSize: "64px" }}
           ></i>
           <i
-            className="devicon-nodejs-plain font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] transition"
-            style={{ fontSize: "64px" }}
-          ></i>
-
-          <i
-            class="devicon-c-original duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] transition"
-            style={{ fontSize: "64px" }}
-          ></i>
-          <i
-            className="devicon-cplusplus-plain duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] transition"
+            className="devicon-redux-original font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] hover:scale-110 transition-all"
             style={{ fontSize: "64px" }}
           ></i>
 
           <i
-            className="devicon-photoshop-plain duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] transition"
+            className="devicon-tailwindcss-original font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] hover:scale-110 transition-all"
+            style={{ fontSize: "64px" }}
+          ></i>
+          <i
+            className="devicon-nodejs-plain font-5xl sm:font-6xl  duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] hover:scale-110 transition-all  "
+            style={{ fontSize: "64px" }}
+          ></i>
+
+          <i
+            className="devicon-c-original duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] hover:scale-110 transition-all"
+            style={{ fontSize: "64px" }}
+          ></i>
+          <i
+            className="devicon-cplusplus-plain duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] hover:scale-110 transition-all"
+            style={{ fontSize: "64px" }}
+          ></i>
+
+          <i
+            className="devicon-photoshop-plain duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] hover:scale-110 transition-all"
             style={{ fontSize: "64px" }}
           ></i>
 
           <div className="col-span-2 sm:col-span-3 md:col-span-5 flex justify-center">
             <i
-              className="devicon-canva-original duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] transition"
+              className="devicon-canva-original duration-300 p-6 border-2 rounded border-[#cc5ef7] hover:border-[#ad48d4] hover:scale-110 transition-all"
               style={{ fontSize: "64px" }}
             ></i>
           </div>
