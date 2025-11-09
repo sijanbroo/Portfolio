@@ -47,11 +47,3 @@ npm run preview # locally preview production build
 ## Deployment
 
 Build the site and deploy the generated `dist` directory to any static host (Vercel, Netlify, Cloudflare Pages, GitHub Pages).
-
-## License
-
-MIT — change or add a LICENSE file if you need a different license.
-
----
-
-If you want, I can also: tidy package.json scripts, add a production-ready metadata (Open Graph/SEO), or create a quick deploy config for Netlify/Vercel.
