@@ -9,7 +9,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import SmallDeviceToast from "./components/SmallDeviceToast";
 import SmallDeviceToastOnRouteChange from "./components/SmallDeviceToastOnRouteChange";
-import Contact from "./components/Contacts.jsx";
+import Contact from "./components/Contact.jsx";
 
 function App() {
   return (

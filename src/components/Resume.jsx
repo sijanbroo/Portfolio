@@ -5,11 +5,10 @@ function Resume() {
   return (
     <div className="flex flex-col md:flex-col justify-center items-center gap-10 mb-12 mt-12">
       {/* Download Section */}
-      <div className="flex flex-col items-center">
+      <div className="flex-col md:flex-row items-center gap-4 flex">
         <a
           href={CvDoc}
           download="SijanShrestha_Resume.pdf"
-          target="_blank"
           rel="noopener noreferrer"
           className="bg-[#cc5ef7] text-white px-6 py-3 rounded shadow hover:bg-[#ad48d4] flex items-center gap-2 transition"
         >

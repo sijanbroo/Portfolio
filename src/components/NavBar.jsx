@@ -101,7 +101,11 @@ function NavBar() {
               </NavLink>
             </li>
             <li className="px-5 py-1 flex items-center justify-center bg-[#4d2d6ec4] hover:bg-[#41255cc4] rounded-lg transition ">
-              <NavLink to="https://www.github.com/sijanbroo">
+              <NavLink
+                to="https://www.github.com/sijanbroo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i
                   className="fi fi-sr-code-branch h-3 w-3"
                   style={{
@@ -221,7 +225,11 @@ function NavBar() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="https://www.github.com/sijanbroo">
+              <NavLink
+                to="https://www.github.com/sijanbroo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button
                   onClick={() => setNavOpen(false)}
                   className="px-6 py-3 flex items-center justify-center gap-2 bg-[#4d2d6ec4] hover:bg-[#41255cc4] rounded-md transition "
