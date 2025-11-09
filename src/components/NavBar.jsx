@@ -3,6 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 import { CiMenuFries } from "react-icons/ci";
 import { MdClose } from "react-icons/md";
 import { RiContactsBook3Line } from "react-icons/ri";
+import { IoCodeSlashOutline } from "react-icons/io5";
+import { IoDocumentAttachOutline } from "react-icons/io5";
+
+import { MdOutlinePerson4 } from "react-icons/md";
+import { HiOutlineHome } from "react-icons/hi2";
 
 function NavBar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -32,57 +37,53 @@ function NavBar() {
           <ul className="flex flex-row text-base lg:text-lg justify-evenly gap-10 mr-4">
             <li>
               <NavLink to="/">
-                <i
-                  className="fi fi-rr-home"
+                <HiOutlineHome
                   style={{
                     display: "inline",
-                    verticalAlign: "middle",
+                    verticalAlign: "center",
                     marginRight: 4,
                     color: "white",
                   }}
-                ></i>
+                />
                 Home
               </NavLink>
             </li>
             <li>
               <NavLink to="/about">
-                <i
-                  className="fi-rr-user"
+                <MdOutlinePerson4
                   style={{
                     display: "inline",
                     verticalAlign: "middle",
                     marginRight: 4,
                     color: "white",
                   }}
-                ></i>
+                />
                 About
               </NavLink>
             </li>
             <li>
               <NavLink to="/projects">
-                <i
-                  className="fi fi-rr-code-editing"
+                <IoCodeSlashOutline
                   style={{
                     display: "inline",
                     verticalAlign: "middle",
                     marginRight: 4,
                     color: "white",
                   }}
-                ></i>
+                />
                 Projects
               </NavLink>
             </li>
             <li>
               <NavLink to="/resume">
-                <i
-                  className="fi fi-rr-resume"
+                <IoDocumentAttachOutline
                   style={{
                     display: "inline",
                     verticalAlign: "middle",
                     marginRight: 4,
                     color: "white",
                   }}
-                ></i>
+                />
                 Resume
               </NavLink>
             </li>
@@ -169,43 +170,40 @@ function NavBar() {
             </li>
             <li>
               <NavLink to="/about" onClick={() => setNavOpen(false)}>
-                <i
-                  className="fi-rr-user"
+                <MdOutlinePerson4
                   style={{
                     display: "inline",
                     verticalAlign: "middle",
                     marginRight: 4,
                     color: "white",
                   }}
-                ></i>
+                />
                 About
               </NavLink>
             </li>
             <li>
               <NavLink to="/projects" onClick={() => setNavOpen(false)}>
-                <i
-                  className="fi fi-rr-code-editing"
+                <IoCodeSlashOutline
                   style={{
                     display: "inline",
                     verticalAlign: "middle",
                     marginRight: 4,
                     color: "white",
                   }}
-                ></i>
+                />
                 Projects
               </NavLink>
             </li>
             <li>
               <NavLink to="/resume" onClick={() => setNavOpen(false)}>
-                <i
-                  className="fi fi-rr-resume"
+                <IoDocumentAttachOutline
                   style={{
                     display: "inline",
                     verticalAlign: "middle",
                     marginRight: 4,
                     color: "white",
                   }}
-                ></i>
+                />
                 Resume
               </NavLink>
             </li>
