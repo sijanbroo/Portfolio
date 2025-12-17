@@ -25,9 +25,12 @@ function Home() {
               <ReactTyped
                 className="text-[#cc5ef7] text-2xl sm:text-3xl font-semibold"
                 strings={[
-                  "Web Developer",
+                  "Frontend Developer",
+                  "Aspiring Full Stack Developer",
+                  "Problem Solver",
                   "Freelancer",
                   "CyberSecurity Enthusiast",
+                  "Networking Enthusiast",
                 ]}
                 typeSpeed={80}
                 loop
