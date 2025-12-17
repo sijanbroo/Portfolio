@@ -54,7 +54,7 @@ const projects = [
 function Projects() {
   return (
     <section className="w-full bg-gradient-to-b from-[#0f0f10] via-[#0d0d12] to-[#0b0b10] py-12 sm:py-16">
-      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen-xl px-4 pr-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-4 sm:gap-5 mb-8 sm:mb-10">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#cc5ef7]">
             Featured work
@@ -68,14 +68,12 @@ function Projects() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 max-md:mr-1 xl:grid-cols-3 ">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm p-6 flex flex-col gap-4 shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-2 hover:border-[#cc5ef7]/60"
+              className="group relative overflow-hidden rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm p-5 sm:p-6 flex flex-col gap-3 sm:gap-4 shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_70px_rgba(0,0,0,0.45)] hover:border-[#cc5ef7]/60 focus-within:border-[#cc5ef7]/40"
             >
-              {/* Image slot removed as requested */}
-
               <div className="flex items-center justify-between gap-3">
                 <span className="text-xs uppercase tracking-wide px-3 py-1 rounded-full bg-[#cc5ef7]/15 text-[#e9b8ff] border border-[#cc5ef7]/30">
                   {project.tag}
@@ -107,7 +105,7 @@ function Projects() {
                   href={project.repo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-white px-4 py-2 rounded-lg bg-[#cc5ef7] hover:bg-[#b74bdc] transition-colors shadow-lg shadow-[#cc5ef7]/30"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-white px-4 py-2 rounded-lg bg-[#cc5ef7] hover:bg-[#b74bdc] active:scale-95 transition-all shadow-lg shadow-[#cc5ef7]/30 hover:shadow-xl hover:shadow-[#cc5ef7]/40 focus:outline-none focus:ring-2 focus:ring-[#cc5ef7]/50 focus:ring-offset-2 focus:ring-offset-[#0d0d12]"
                 >
                   <span>View Code</span>
                   <i

@@ -1,3 +1,5 @@
+@use "sass:string";
+
 html,
 body {
   margin: 0;
@@ -22,7 +24,7 @@ body {
   @for $i from 2 through $number_of_stars {
     $value: "#{$value}, #{random(2000)}px #{random(2000)}px #FFF"; // Add more shadows
   }
-  @return unquote($value); // Return the concatenated value
+  @return string.unquote($value); // Return the concatenated value
 }
 
 // Generate different sets of box-shadow values for stars of varying sizes
