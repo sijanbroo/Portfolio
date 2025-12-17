@@ -4,11 +4,11 @@ import React, { useState } from "react";
 // const bColor = hover ? "#7d5692" : "#9b7eac";
 function About() {
   return (
-    <div>
-      <div className="flex flex-row max-md:flex-col items-center justify-center mt-20 mb-40">
-        <div className=" flex flex-col w-1/3 justify-center items-start max-md:order-2 max-md:w-full max-md:m-12 gap-2 max-md:items-center max-md:justify-start px-4">
-          <h1 className="text-4xl max-md:text-3xl font-bold mb-5 flex items-center ">
-            Know Who <span>I'M</span>
+    <div className="px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-row max-md:flex-col items-center justify-center mt-20 mb-40 max-w-screen-xl mx-auto gap-8">
+        <div className="flex flex-col w-full md:w-1/2 justify-center items-start max-md:order-2 gap-3 max-md:items-center max-md:text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-5">
+            Know Who <span className="text-[#cc5ef7]">I AM</span>
           </h1>
 
           <p className="text-xl max-md:text-lg mt-4 font-semibold">
@@ -23,20 +23,27 @@ function About() {
           <p className="text-xl max-md:text-lg font-semibold mt-4 mb-4">
             Apart from coding, some other activities that I love to do!
           </p>
-          <ul className="text-xl max-md:text-lg font-semibold">
-            <li>
-              <i className="fi fi-dc-angle-double-small-right"></i>Playing Games
+          <ul className="text-xl max-md:text-lg font-semibold space-y-2">
+            <li className="flex items-center gap-2">
+              <i className="fi fi-dc-angle-double-small-right text-[#cc5ef7]"></i>
+              <span>Playing Games</span>
             </li>
-            <li>
-              <i className="fi fi-dc-angle-double-small-right"></i>Travelling
+            <li className="flex items-center gap-2">
+              <i className="fi fi-dc-angle-double-small-right text-[#cc5ef7]"></i>
+              <span>Travelling</span>
             </li>
-            <li>
-              <i className="fi fi-dc-angle-double-small-right"></i>Reading Books
+            <li className="flex items-center gap-2">
+              <i className="fi fi-dc-angle-double-small-right text-[#cc5ef7]"></i>
+              <span>Reading Books</span>
             </li>
           </ul>
-          <div className="flex mt-6 flex-col text-xl max-md:text-lg justify-center text-[#9b7eac]">
-            <p>"Strive to build things that make a difference!"</p>
-            <p className="flex justify-end">&mdash; Sijan</p>
+          <div className="mt-8 p-4 border-l-4 border-[#cc5ef7] bg-[#cc5ef7]/5 rounded-r-lg">
+            <p className="text-lg max-md:text-base italic text-gray-300">
+              "Strive to build things that make a difference!"
+            </p>
+            <p className="text-sm text-[#cc5ef7] mt-2 text-right">
+              &mdash; Sijan
+            </p>
           </div>
         </div>
         <div className="flex justify-center max-md:w-full h-auto w-1/2 max-md:order-1 max-md:mb-8">

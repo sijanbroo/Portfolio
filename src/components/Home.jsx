@@ -4,32 +4,34 @@ import { ReactTyped } from "react-typed";
 
 function Home() {
   return (
-    <div>
-      <div className="flex max-md:flex-col flex-row items-center justify-center mt-2 mb-40">
-        <div className="flex flex-col w-1/3 justify-center items-start max-md:order-2 max-md:w-full max-md:m-12 max-md:mt-12 gap-4 max-md:items-center">
-          <div className="flex flex-row justify-center mb-2 max-md:flex-col max-md:items-center gap-4">
-            <h2 className="font-semibold text-2xl flex max-md:justify-start">
-              Hi There! ✋
+    <div className="animate-fadeIn">
+      <div className="flex max-md:flex-col flex-row items-center justify-center mt-8 mb-40 px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto">
+        <div className="flex flex-col w-full md:w-1/2 lg:w-2/5 justify-center items-start max-md:order-2 max-md:mt-8 gap-5 max-md:items-center max-md:text-center">
+          <div className="flex flex-col gap-3 w-full">
+            <h2 className="font-semibold text-2xl sm:text-3xl text-gray-300 animate-slideDown">
+              Hi There! <span className="inline-block animate-wave">👋</span>
             </h2>
           </div>
-          <div className="">
-            <div className="font-bold mb-5">
-              <h1 className="text-4xl font-bold">
-                I'M <span className="text-[#cc5ef7]">SIJAN SHRESTHA</span>
+          <div className="w-full">
+            <div className="mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                I'M{" "}
+                <span className="text-[#cc5ef7] bg-gradient-to-r from-[#cc5ef7] to-[#8b3fbd] bg-clip-text text-transparent">
+                  SIJAN SHRESTHA
+                </span>
               </h1>
             </div>
-            <div className="">
-              {""}
+            <div className="h-16 sm:h-20">
               <ReactTyped
-                className="text-[#cc5ef7] text-2xl font-semibold"
+                className="text-[#cc5ef7] text-2xl sm:text-3xl font-semibold"
                 strings={[
                   "Web Developer",
                   "Freelancer",
                   "CyberSecurity Enthusiast",
                 ]}
-                typeSpeed={100}
+                typeSpeed={80}
                 loop
-                backspeed={100}
+                backSpeed={60}
                 cursorChar="|"
                 showCursor={true}
               />
@@ -64,53 +66,79 @@ function Home() {
             </h1>
           </div>
 
-          <div className="max-md:text-base text-lg flex-col max-md:items-center max-md:justify-center gap-4 items-start justify-center">
-            <p className="">
-              I fell in love with programming and I have at-least learnt
+          <div className="max-md:text-base text-lg flex flex-col gap-4 items-start justify-center leading-relaxed text-gray-300">
+            <p>
+              I fell in love with programming and I have at least learnt
               something, I think… 🤷‍♂️
             </p>
-            <p className="">
-              My field of Interest's are building new{" "}
-              <span className="text-[#cc5ef7]">
+            <p>
+              My field of interests are building new{" "}
+              <span className="text-[#cc5ef7] font-semibold">
                 Web Technologies and Products
               </span>{" "}
               and also in areas related to{" "}
-              <span className="text-[#cc5ef7]">
+              <span className="text-[#cc5ef7] font-semibold">
                 Networking and CyberSecurity.
               </span>
             </p>
-            <p className="">
+            <p>
               Whenever possible, I also apply my passion for developing products
               with{" "}
-              <span className="text-[#cc5ef7]">Modern Javascript Library</span>{" "}
-              like
-              <span className="text-[#cc5ef7]"> React.js.</span>
+              <span className="text-[#cc5ef7] font-semibold">
+                Modern JavaScript Libraries
+              </span>{" "}
+              like{" "}
+              <span className="text-[#cc5ef7] font-semibold">React.js.</span>
             </p>
           </div>
         </div>
       </div>
 
-      <section>
-        <div className="flex flex-col justify-center items-center mt-20 mb-20">
-          <h1 className="text-4xl max-md:text-3xl mb-2 font-medium">
-            FIND ME ON
-          </h1>
-          <p className="text-lg max-md:text-base mb-2">
-            Feel free to <span className="text-[#cc5ef7]">connect</span> with me
+      <section className="py-16">
+        <div className="flex flex-col justify-center items-center max-w-screen-xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl mb-3 font-bold">FIND ME ON</h2>
+          <p className="text-base sm:text-lg text-gray-300 mb-8">
+            Feel free to{" "}
+            <span className="text-[#cc5ef7] font-semibold">connect</span> with
+            me
           </p>
-          <div className="flex flex-row gap-6">
-            <Link to="https://linkedin.com/in/sijanbro/">
-              <i className="fi fi-brands-linkedin text-[28px] md:text-[36px] leading-none"></i>
-            </Link>
-            <Link to="https://github.com/sijanbroo">
-              <i className="fi fi-brands-github text-[28px] md:text-[36px] leading-none"></i>
-            </Link>
-            <Link to="https://www.instagram.com/sijanbroo/">
-              <i className="fi fi-brands-instagram text-[28px] md:text-[36px] leading-none"></i>
-            </Link>
-            <Link to="https://x.com/sijanshres746">
-              <i className="fi fi-brands-twitter-alt text-[28px] md:text-[36px] leading-none"></i>
-            </Link>
+          <div className="flex flex-row gap-4 sm:gap-6">
+            <a
+              href="https://linkedin.com/in/sijanbro/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border-2 border-white/10 hover:border-[#cc5ef7] transition-all hover:scale-110 hover:bg-[#cc5ef7]/10 focus:outline-none focus:ring-2 focus:ring-[#cc5ef7]/50"
+              aria-label="LinkedIn"
+            >
+              <i className="fi fi-brands-linkedin text-[28px] md:text-[32px] leading-none"></i>
+            </a>
+            <a
+              href="https://github.com/sijanbroo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border-2 border-white/10 hover:border-[#cc5ef7] transition-all hover:scale-110 hover:bg-[#cc5ef7]/10 focus:outline-none focus:ring-2 focus:ring-[#cc5ef7]/50"
+              aria-label="GitHub"
+            >
+              <i className="fi fi-brands-github text-[28px] md:text-[32px] leading-none"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/sijanbroo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border-2 border-white/10 hover:border-[#cc5ef7] transition-all hover:scale-110 hover:bg-[#cc5ef7]/10 focus:outline-none focus:ring-2 focus:ring-[#cc5ef7]/50"
+              aria-label="Instagram"
+            >
+              <i className="fi fi-brands-instagram text-[28px] md:text-[32px] leading-none"></i>
+            </a>
+            <a
+              href="https://x.com/sijanshres746"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border-2 border-white/10 hover:border-[#cc5ef7] transition-all hover:scale-110 hover:bg-[#cc5ef7]/10 focus:outline-none focus:ring-2 focus:ring-[#cc5ef7]/50"
+              aria-label="Twitter / X"
+            >
+              <i className="fi fi-brands-twitter-alt text-[28px] md:text-[32px] leading-none"></i>
+            </a>
           </div>
         </div>
       </section>
