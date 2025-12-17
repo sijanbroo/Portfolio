@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { CiMenuFries } from "react-icons/ci";
 import { MdClose } from "react-icons/md";
-import { RiContactsBook3Line } from "react-icons/ri";
-import { IoCodeSlashOutline } from "react-icons/io5";
-import { IoDocumentAttachOutline } from "react-icons/io5";
-
-import { MdOutlinePerson4 } from "react-icons/md";
-import { HiOutlineHome } from "react-icons/hi2";
+import { MdContactMail } from "react-icons/md";
+import { FaCode } from "react-icons/fa";
+import { MdDescription } from "react-icons/md";
+import { MdPerson } from "react-icons/md";
+import { MdHome } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
 
 function NavBar() {
   const [navOpen, setNavOpen] = useState(false);
@@ -36,94 +36,58 @@ function NavBar() {
         <div className="hidden md:flex justify-center items-center">
           <ul className="flex flex-row text-base lg:text-lg justify-evenly gap-10 mr-4">
             <li>
-              <NavLink to="/">
-                <HiOutlineHome
-                  style={{
-                    display: "inline",
-                    verticalAlign: "center",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                />
+              <NavLink
+                to="/"
+                className="flex items-center gap-2 hover:text-[#cc5ef7] transition"
+              >
+                <MdHome size={20} />
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about">
-                <MdOutlinePerson4
-                  style={{
-                    display: "inline",
-                    verticalAlign: "middle",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                />
+              <NavLink
+                to="/about"
+                className="flex items-center gap-2 hover:text-[#cc5ef7] transition"
+              >
+                <MdPerson size={20} />
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink to="/projects">
-                <IoCodeSlashOutline
-                  style={{
-                    display: "inline",
-                    verticalAlign: "middle",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                />
+              <NavLink
+                to="/projects"
+                className="flex items-center gap-2 hover:text-[#cc5ef7] transition"
+              >
+                <FaCode size={18} />
                 Projects
               </NavLink>
             </li>
             <li>
-              <NavLink to="/resume">
-                <IoDocumentAttachOutline
-                  style={{
-                    display: "inline",
-                    verticalAlign: "middle",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                />
+              <NavLink
+                to="/resume"
+                className="flex items-center gap-2 hover:text-[#cc5ef7] transition"
+              >
+                <MdDescription size={20} />
                 Resume
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact">
-                <RiContactsBook3Line
-                  style={{
-                    display: "inline",
-                    verticalAlign: "middle",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                />
+              <NavLink
+                to="/contact"
+                className="flex items-center gap-2 hover:text-[#cc5ef7] transition"
+              >
+                <MdContactMail size={20} />
                 Contact
               </NavLink>
             </li>
-            <li className="px-5 py-1 flex items-center justify-center bg-[#4d2d6ec4] hover:bg-[#41255cc4] rounded-lg transition ">
+            <li className="px-5 py-2 flex items-center justify-center gap-2 bg-[#4d2d6ec4] hover:bg-[#41255cc4] rounded-lg transition">
               <NavLink
                 to="https://www.github.com/sijanbroo"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex items-center gap-1"
               >
-                <i
-                  className="fi fi-sr-code-branch h-3 w-3"
-                  style={{
-                    display: "inline",
-                    verticalAlign: "middle",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                ></i>
-                <i
-                  className="fi fi-sr-star h-2 w-2"
-                  style={{
-                    display: "inline",
-                    verticalAlign: "middle",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                ></i>
+                <FaGithub size={20} />
               </NavLink>
             </li>
           </ul>
@@ -159,68 +123,52 @@ function NavBar() {
 
           <ul className="flex flex-col text-sm justify-evenly gap-10 mr-4">
             <li>
-              <NavLink to="/" onClick={() => setNavOpen(false)}>
-                <i
-                  className="fi fi-rr-home"
-                  style={{
-                    display: "inline",
-                    verticalAlign: "middle",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                ></i>
+              <NavLink
+                to="/"
+                onClick={() => setNavOpen(false)}
+                className="flex items-center gap-2 hover:text-[#cc5ef7] transition"
+              >
+                <MdHome size={18} />
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" onClick={() => setNavOpen(false)}>
-                <MdOutlinePerson4
-                  style={{
-                    display: "inline",
-                    verticalAlign: "middle",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                />
+              <NavLink
+                to="/about"
+                onClick={() => setNavOpen(false)}
+                className="flex items-center gap-2 hover:text-[#cc5ef7] transition"
+              >
+                <MdPerson size={18} />
                 About
               </NavLink>
             </li>
             <li>
-              <NavLink to="/projects" onClick={() => setNavOpen(false)}>
-                <IoCodeSlashOutline
-                  style={{
-                    display: "inline",
-                    verticalAlign: "middle",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                />
+              <NavLink
+                to="/projects"
+                onClick={() => setNavOpen(false)}
+                className="flex items-center gap-2 hover:text-[#cc5ef7] transition"
+              >
+                <FaCode size={16} />
                 Projects
               </NavLink>
             </li>
             <li>
-              <NavLink to="/resume" onClick={() => setNavOpen(false)}>
-                <IoDocumentAttachOutline
-                  style={{
-                    display: "inline",
-                    verticalAlign: "middle",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                />
+              <NavLink
+                to="/resume"
+                onClick={() => setNavOpen(false)}
+                className="flex items-center gap-2 hover:text-[#cc5ef7] transition"
+              >
+                <MdDescription size={18} />
                 Resume
               </NavLink>
             </li>
             <li>
-              <NavLink to="/contact">
-                <RiContactsBook3Line
-                  style={{
-                    display: "inline",
-                    verticalAlign: "middle",
-                    marginRight: 4,
-                    color: "white",
-                  }}
-                />
+              <NavLink
+                to="/contact"
+                onClick={() => setNavOpen(false)}
+                className="flex items-center gap-2 hover:text-[#cc5ef7] transition"
+              >
+                <MdContactMail size={18} />
                 Contact
               </NavLink>
             </li>
@@ -229,29 +177,13 @@ function NavBar() {
                 to="https://www.github.com/sijanbroo"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-full"
               >
                 <button
                   onClick={() => setNavOpen(false)}
-                  className="px-6 py-3 flex items-center justify-center gap-2 bg-[#4d2d6ec4] hover:bg-[#41255cc4] rounded-md transition "
+                  className="w-full px-6 py-3 flex items-center justify-center gap-2 bg-[#4d2d6ec4] hover:bg-[#41255cc4] rounded-md transition"
                 >
-                  <i
-                    className="fi fi-sr-code-branch h-2 w-2"
-                    style={{
-                      display: "inline-block",
-                      verticalAlign: "middle",
-                      marginRight: 4,
-                      color: "white",
-                    }}
-                  ></i>
-                  <i
-                    className="fi fi-sr-star h-2 w-2"
-                    style={{
-                      display: "inline-block",
-                      verticalAlign: "middle",
-                      marginRight: 4,
-                      color: "white",
-                    }}
-                  ></i>
+                  <FaGithub size={16} />
                 </button>
               </NavLink>
             </li>
