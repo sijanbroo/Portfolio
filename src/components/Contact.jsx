@@ -1,6 +1,7 @@
 // src/components/Contact.jsx
 import React, { useState } from "react";
 import { toast } from "react-toastify";
+import conf from "../conf/conf";
 
 export default function Contact() {
   const [submitting, setSubmitting] = useState(false);
@@ -9,36 +10,33 @@ export default function Contact() {
     e.preventDefault();
     const form = e.currentTarget;
     if (!form.checkValidity()) {
-      // Trigger native validation messages
       form.reportValidity();
       return;
     }
 
+
     setSubmitting(true);
 
-    // Honeypot check
-    const botTrap = new FormData(form).get("company");
+    const formData = new FormData(form);
+    const botTrap = formData.get("company");
     if (botTrap) {
       setSubmitting(false);
       return;
     }
 
-    const payload = {
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
-      subject: form.subject.value.trim(),
-      message: form.message.value.trim(),
-    };
+    formData.set("name", form.name.value.trim());
+    formData.set("email", form.email.value.trim());
+    formData.set("subject", form.subject.value.trim());
+    formData.set("message", form.message.value.trim());
 
     try {
-      // TODO: Replace with your API endpoint
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: formData,
       });
 
-      if (!res.ok) throw new Error("Failed to send");
+      const data = await res.json();
+      if (!res.ok || !data.success) throw new Error("Failed to send");
 
       toast.success("Message sent. I’ll get back to you soon!");
       form.reset();
@@ -50,20 +48,28 @@ export default function Contact() {
   }
 
   return (
-    <section className="min-h-screen flex items-center">
-      <div className="mx-auto max-w-screen-lg w-full px-4 sm:px-6 lg:px-8 py-10">
-        <header className="mb-8 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold">
+    <section className="min-h-screen flex items-center py-12 sm:py-16">
+      <div className="mx-auto max-w-screen-lg w-full px-4 sm:px-6 lg:px-8">
+        <header className="mb-10 text-center space-y-3">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#cc5ef7]">
+            Let's Connect
+          </p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             Get In <span className="text-[#cc5ef7]">Touch</span>
           </h1>
-          <p className="text-gray-400 mt-2">
-            Questions, collabs, or compliments—drop them below.
+          <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+            Have a project in mind? Want to collaborate? Or just want to say hi?
+            I'd love to hear from you!
           </p>
         </header>
 
-        <div className="rounded-2xl bg-gray-900/60 border border-gray-800 p-5 sm:p-8">
+        <div className="relative rounded-2xl bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-gray-900/80 border border-white/10 p-6 sm:p-10 shadow-2xl backdrop-blur-sm overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#cc5ef7]/10 rounded-full blur-3xl -z-10" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#8b3fbd]/10 rounded-full blur-3xl -z-10" />
+
           <form onSubmit={onSubmit} noValidate>
-            {/* Honeypot (hidden from humans) */}
+            <input type="hidden" name="access_key" value={conf.web3APIKey} />
+
             <input
               type="text"
               name="company"
@@ -73,13 +79,13 @@ export default function Contact() {
               aria-hidden="true"
             />
 
-            {/* Grid: single column on mobile, two on md+ */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm text-gray-300 mb-1"
+                  className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2"
                 >
+                  <i className="fi fi-rr-user text-[#cc5ef7]"></i>
                   Name
                 </label>
                 <input
@@ -88,18 +94,19 @@ export default function Contact() {
                   type="text"
                   required
                   minLength={2}
-                  placeholder="Your name"
-                  className="w-full rounded-xl bg-gray-800 text-gray-100 placeholder-gray-500
+                  placeholder="John Doe"
+                  className="w-full rounded-xl bg-gray-800/50 text-gray-100 placeholder-gray-500
                              border border-gray-700 focus:border-[#cc5ef7] focus:ring-2 focus:ring-[#cc5ef7]/40
-                             px-4 py-3 outline-none"
+                             px-4 py-3.5 outline-none transition-all hover:bg-gray-800/70"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm text-gray-300 mb-1"
+                  className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2"
                 >
+                  <i className="fi fi-rr-envelope text-[#cc5ef7]"></i>
                   Email
                 </label>
                 <input
@@ -107,18 +114,19 @@ export default function Contact() {
                   name="email"
                   type="email"
                   required
-                  placeholder="you@example.com"
-                  className="w-full rounded-xl bg-gray-800 text-gray-100 placeholder-gray-500
+                  placeholder="john@example.com"
+                  className="w-full rounded-xl bg-gray-800/50 text-gray-100 placeholder-gray-500
                              border border-gray-700 focus:border-[#cc5ef7] focus:ring-2 focus:ring-[#cc5ef7]/40
-                             px-4 py-3 outline-none"
+                             px-4 py-3.5 outline-none transition-all hover:bg-gray-800/70"
                 />
               </div>
 
               <div className="md:col-span-2">
                 <label
                   htmlFor="subject"
-                  className="block text-sm text-gray-300 mb-1"
+                  className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2"
                 >
+                  <i className="fi fi-rr-bulb text-[#cc5ef7]"></i>
                   Subject
                 </label>
                 <input
@@ -127,18 +135,19 @@ export default function Contact() {
                   type="text"
                   required
                   minLength={3}
-                  placeholder="What’s this about?"
-                  className="w-full rounded-xl bg-gray-800 text-gray-100 placeholder-gray-500
+                  placeholder="Let's work together!"
+                  className="w-full rounded-xl bg-gray-800/50 text-gray-100 placeholder-gray-500
                              border border-gray-700 focus:border-[#cc5ef7] focus:ring-2 focus:ring-[#cc5ef7]/40
-                             px-4 py-3 outline-none"
+                             px-4 py-3.5 outline-none transition-all hover:bg-gray-800/70"
                 />
               </div>
 
               <div className="md:col-span-2">
                 <label
                   htmlFor="message"
-                  className="block text-sm text-gray-300 mb-1"
+                  className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2"
                 >
+                  <i className="fi fi-rr-comment-alt text-[#cc5ef7]"></i>
                   Message
                 </label>
                 <textarea
@@ -147,24 +156,36 @@ export default function Contact() {
                   required
                   minLength={10}
                   rows={6}
-                  placeholder="Tell me everything…"
-                  className="w-full rounded-xl bg-gray-800 text-gray-100 placeholder-gray-500
+                  placeholder="Tell me about your project, ideas, or just say hello..."
+                  className="w-full rounded-xl bg-gray-800/50 text-gray-100 placeholder-gray-500
                              border border-gray-700 focus:border-[#cc5ef7] focus:ring-2 focus:ring-[#cc5ef7]/40
-                             px-4 py-3 outline-none resize-y"
+                             px-4 py-3.5 outline-none resize-y transition-all hover:bg-gray-800/70"
                 />
               </div>
             </div>
 
-            <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
+            <div className="mt-8 flex items-center justify-center gap-3 flex-wrap">
               <button
                 type="submit"
                 disabled={submitting}
-                className="inline-flex items-center justify-center rounded-xl
-                           bg-[#cc5ef7] text-black font-semibold
-                           px-5 py-3 transition hover:brightness-110 active:brightness-95
-                           disabled:opacity-60 disabled:cursor-not-allowed"
+                className="inline-flex items-center justify-center gap-2 rounded-xl
+                           bg-[#cc5ef7] text-white font-semibold text-base
+                           px-8 py-4 transition-all hover:bg-[#b74bdc] hover:shadow-xl hover:shadow-[#cc5ef7]/40
+                           active:scale-95 shadow-lg shadow-[#cc5ef7]/30
+                           disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100
+                           focus:outline-none focus:ring-2 focus:ring-[#cc5ef7]/50 focus:ring-offset-2 focus:ring-offset-gray-900"
               >
-                {submitting ? "Sending…" : "Send Message"}
+                {submitting ? (
+                  <>
+                    <i className="fi fi-rr-spinner animate-spin"></i>
+                    <span>Sending...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Send Message</span>
+                    <i className="fi fi-rr-paper-plane"></i>
+                  </>
+                )}
               </button>
             </div>
 
