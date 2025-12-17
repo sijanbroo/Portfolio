@@ -4,6 +4,7 @@ import Resume from "./components/Resume.jsx";
 import Projects from "./components/Projects.jsx";
 import Home from "./components/Home.jsx";
 import Footer from "./components/Footer.jsx";
+import ScrollButton from "./components/ScrollButton.jsx";
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -29,6 +30,7 @@ function App() {
         </Routes>
       </main>
 
+      <ScrollButton />
       <Footer />
     </div>
   );
